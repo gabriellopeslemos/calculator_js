@@ -97,30 +97,24 @@
       function calc(type, value) {
         const result = document.getElementById('result')
         if(type === 'action'){
+
           const symbols = ['+', '-', '*', '/', '.']
 
           if(value === 'c') {
             result.value = ''
+
           } else if(value === '='){
             var field_value = eval(result.value)
             result.value = field_value
+            
           } else if(symbols.includes(value)){
             result.value += value
-          } 
-        }
+          }
 
-        else if(type === 'value'){
+        } else if(type === 'value'){
           result.value += value
-        } else {
-
         }
       }
-
-
-
-
-
-
 
     </script>
   </body>	
